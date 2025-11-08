@@ -1,0 +1,122 @@
+/* About Section Layout */
+.about_container {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+}
+
+/* About Image Styling */
+.about_me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_my_imge {
+  transform: rotate(10deg);
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: var(--transition);
+  width: 100%;
+  height: 100%;
+}
+
+.about_my_imge:hover {
+  transform: rotate(0deg);
+}
+
+.about_my_imge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Content Area */
+.about_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* About Cards Grid */
+.about_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about_card {
+  background: var(--color-primary-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about_card:hover {
+  background: transparent;
+  border-color: var(--color-bg-variant);
+  transform: translateY(-0.5rem);
+}
+
+/* About Paragraph */
+.about_content p {
+  margin: 2rem 0;
+  color: var(--color-light);
+  text-align: justify;
+}
+
+/* About Button */
+.about_content .btn {
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+/* About Icons */
+.about_icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+/* Responsive Grid Adjustments */
+@media screen and (max-width: 1024px) {
+  .about_container {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  
+  .about_me {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  .about_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about_cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .about_me {
+    width: 90%;
+  }
+  
+  .about_content .btn {
+    align-self: center;
+  }
+}

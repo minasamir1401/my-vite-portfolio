@@ -1,0 +1,351 @@
+.home {
+  height: 100vh;
+  min-height: 600px;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.home-container {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btns {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+}
+.btn-primary{
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+.home-container h4 {
+  font-size: 1.5rem;
+}
+
+.home-container .me {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  margin: 30px auto;
+  border-radius: 10rem 10rem 0 0;
+  overflow: hidden;
+  padding: 0;
+  background: linear-gradient(var(--color-primary), transparent);
+}
+
+.home-container .me img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-container .me::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 50%, var(--color-bg) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scroll-down {
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-decoration: none;
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  animation: scrollDown 2s infinite;
+}
+
+.scroll-down:hover {
+  color: var(--color-white);
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: rotate(90deg) translateX(0);
+  }
+  50% {
+    transform: rotate(90deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(0);
+  }
+}
+
+.home-socials {
+  display: flex;
+  flex-direction: column;
+  left: 60px;
+  bottom: 50px;
+  position: absolute;
+  gap: 0.8rem;
+  align-items: center;
+}
+.home-socials::after{
+  content: '';
+  width: 1px;
+  height: 2rem;
+  background: var(--color-primary);
+}
+.home-socials a {
+  font-size: 25px;
+  color: var(--color-primary);
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1440px) {
+  .home-container {
+    max-width: 900px;
+  }
+  
+  .home-container .me {
+    width: 350px;
+    height: 400px;
+  }
+  
+  .home-socials {
+    left: 80px;
+  }
+  
+  .scroll-down {
+    right: 50px;
+    bottom: 70px;
+    font-size: 1rem;
+  }
+}
+
+/* Standard Desktop/Laptop */
+@media (max-width: 1199px) {
+  .home-container {
+    padding: 0 25px;
+  }
+  
+  .home-socials {
+    left: 50px;
+  }
+  
+  .scroll-down {
+    right: 25px;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .home {
+    padding-top: 80px;
+  }
+  
+  .home-container {
+    padding: 0 20px;
+  }
+  
+  .home-container h1 {
+    font-size: 2.2rem;
+  }
+  
+  .home-container .me {
+    width: 280px;
+    height: 330px;
+    padding: 3.5rem 1.2rem 1.2rem 1.2rem;
+  }
+  
+  .home-socials {
+    left: 40px;
+  }
+  
+  .scroll-down {
+    right: 20px;
+    bottom: 40px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    min-height: 500px;
+    padding: 120px 0 80px;
+  }
+  
+  .home-container {
+    padding: 0 20px;
+    max-width: 600px;
+  }
+  
+  .home-container h1 {
+    font-size: 2rem;
+  }
+  
+  .home-container h4 {
+    font-size: 1.2rem;
+  }
+  
+  .btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .home-container .me {
+    width: 250px;
+    height: 300px;
+    padding: 3rem 1rem 1rem 1rem;
+  }
+  
+  .scroll-down {
+    right: 20px;
+    bottom: 30px;
+    font-size: 0.8rem;
+  }
+  
+  .home-socials {
+    left: 30px;
+    bottom: 30px;
+  }
+  
+  .home-socials a {
+    font-size: 22px;
+  }
+}
+
+/* Large Mobile Phones */
+@media (max-width: 600px) {
+  .home {
+    padding: 100px 0 70px;
+  }
+  
+  .home-container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  
+  .home-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .home-container .me {
+    width: 220px;
+    height: 270px;
+    padding: 2.5rem 0.8rem 0.8rem 0.8rem;
+  }
+  
+  .btns {
+    gap: 0.8rem;
+  }
+  
+  .scroll-down {
+    right: 25px;
+    bottom: 25px;
+  }
+  
+  .home-socials {
+    left: 20px;
+    bottom: 25px;
+  }
+  
+  .home-socials::after {
+    height: 1.5rem;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  .home {
+    padding: 90px 0 60px;
+  }
+  
+  .home-container {
+    padding: 0 12px;
+  }
+  
+  .home-container .me {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .home-container h1 {
+    font-size: 1.6rem;
+  }
+  
+  .home-container h4 {
+    font-size: 1.1rem;
+  }
+  
+  .btns {
+    margin-top: 2rem;
+  }
+  
+  .scroll-down {
+    right: 20px;
+    bottom: 20px;
+    font-size: 0.7rem;
+  }
+  
+  .home-socials {
+    left: 15px;
+    bottom: 20px;
+  }
+  
+  .home-socials a {
+    font-size: 20px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+  .home {
+    padding: 80px 0 50px;
+  }
+  
+  .home-container {
+    padding: 0 10px;
+  }
+  
+  .home-container .me {
+    width: 180px;
+    height: 230px;
+    padding: 2rem 0.6rem 0.6rem 0.6rem;
+  }
+  
+  .home-container h1 {
+    font-size: 1.4rem;
+  }
+  
+  .btns {
+    margin-top: 1.5rem;
+    gap: 0.6rem;
+  }
+  
+  .scroll-down {
+    right: 10px;
+    bottom: 15px;
+  }
+  
+  .home-socials {
+    left: 10px;
+    bottom: 15px;
+  }
+  
+  .home-socials a {
+    font-size: 18px;
+  }
+  
+  .home-socials::after {
+    height: 1rem;
+  }
+}

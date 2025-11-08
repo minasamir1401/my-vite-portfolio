@@ -1,0 +1,118 @@
+.projects_container {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 2rem;
+}
+
+.projects_container .portfolio_item {
+    width: 31%;
+    margin-bottom: 50px;
+    background: var(--color-primary-variant);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    /* Slightly reduced font size */
+    font-size: 0.95rem;
+}
+
+/* Disabled animation for portfolio items */
+/*
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+*/
+
+.fade-in-slide {
+    /* Disabled animation */
+    /* animation: fadeInSlide 0.6s ease-out forwards; */
+}
+
+/* Hover effect for portfolio items */
+.projects_container .portfolio_item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-primary);
+}
+
+/* Image hover effect */
+.portfolio_item-img {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio_item-img img {
+    transition: transform 0.5s ease;
+}
+
+.portfolio_item:hover .portfolio_item-img img {
+    transform: scale(1.05);
+}
+
+.top_section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.top_section h5{
+    color: var(--color-dark);
+    /* Slightly reduced font size */
+    font-size: 1.1rem;
+}
+
+.top_section h2 {
+  color: var(--color-primary);
+  /* Slightly reduced font size */
+  font-size: 2.2rem;
+}
+
+.portfolio_item h3 {
+    margin: 22px 0 35px;
+    transition: color 0.3s ease;
+    /* Slightly reduced font size */
+    font-size: 1.3rem;
+}
+
+.portfolio_item:hover h3 {
+    color: var(--color-primary);
+}
+
+.portfolio_item-btns {
+    display: flex;
+    gap: 20px;
+}
+
+/* Button hover effects */
+.portfolio_item-btns .btn {
+    transition: all 0.3s ease;
+    /* Slightly reduced font size */
+    font-size: 0.9rem;
+}
+
+.portfolio_item-btns .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tablet Portrait */
+@media screen and (max-width: 768px) {
+    .projects_container .portfolio_item {
+        width: 45%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .projects_container .portfolio_item {
+        width: 100%;
+    }
+}
