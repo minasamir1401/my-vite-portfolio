@@ -11,7 +11,7 @@ const portfolioData = [
   {
     id: 1,
     image: IMG1,
-    title: "Portfolio Item 1",
+    title: "E-Commerce",
     github: "https://github.com/minasamir1401/blue-ecommerce-main.git",
     demo: "https://demo1.com",
   },
