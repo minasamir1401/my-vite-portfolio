@@ -13,42 +13,42 @@ const portfolioData = [
     image: IMG1,
     title: "E-Commerce",
     github: "https://github.com/minasamir1401/blue-ecommerce-main.git",
-    demo: "https://demo1.com",
+    demo: "https://minasamir1401.github.io/blue-ecommerce-main/",
   },
   {
     id: 2,
     image: IMG2,
-    title: "Portfolio Item 2",
-    github: "https://github.com/project2",
-    demo: "https://demo2.com",
+    title: "Portfolio",
+    github: "https://github.com/minasamir1401/my-vite-portfolio",
+    demo: "https://minasamir1401.github.io/my-vite-portfolio/",
   },
   {
     id: 3,
     image: IMG3,
-    title: "Portfolio Item 3",
-    github: "https://github.com/project3",
-    demo: "https://demo3.com",
+    title: "Food-Lover",
+    github: "https://github.com/minasamir1401/Food-Lover-main",
+    demo: "https://minasamir1401.github.io/Food-Lover-main/",
   },
   {
     id: 4,
     image: IMG4,
-    title: "Portfolio Item 4",
-    github: "https://github.com/project4",
-    demo: "https://demo4.com",
+    title: "Juicy-GSAP",
+    github: "https://github.com/minasamir1401/Juicy-GSAP",
+    demo: "https://chimerical-syrniki-135224.netlify.app/",
   },
   {
     id: 5,
     image: IMG5,
-    title: "Portfolio Item 5",
-    github: "https://github.com/project5",
-    demo: "https://demo5.com",
+    title: "Next.js Dashboard Project",
+    github: "https://github.com/minasamir1401/Next.js-Dashboard-Project",
+    demo: "https://nextui-dashboard.vercel.app/",
   },
   {
     id: 6,
     image: IMG6,
-    title: "Portfolio Item 6",
-    github: "https://github.com/project6",
-    demo: "https://demo6.com",
+    title: "Landing Page",
+    github: "#",
+    demo: "https://dynamic-pavlova-830596.netlify.app/",
   },
 ];
 
@@ -64,7 +64,7 @@ function Projects() {
         {portfolioData.map(({ id, image, title, github, demo }) => (
           <article key={id} className="portfolio_item">
             <div className="portfolio_item-img">
-              <img src={image} alt={title} />
+              <img src={image} alt={title} loading="lazy" />
             </div>
 
             <h3>{title}</h3>

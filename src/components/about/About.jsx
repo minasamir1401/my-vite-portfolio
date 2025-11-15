@@ -16,7 +16,7 @@ function About() {
       <div className="container about_container">
         <div className="about_me">
           <div className="about_my_imge">
-            <img src={IMagME} alt="About Me" />
+            <img src={IMagME} alt="About Me" loading="lazy" />
           </div>
         </div>
         <div className="about_content">

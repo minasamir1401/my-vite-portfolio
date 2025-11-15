@@ -17,7 +17,7 @@ function Home() {
       <a className="btn btn-primary" id="lets-talk-btn" href="#contact">Let's talk</a>
     </div>
     <div className="me">
-      <img src={me} alt="Mina Samir" />
+      <img src={me} alt="Mina Samir" loading="lazy" />
     </div>
     <a href="#about" className='scroll-down' id="scroll-down-link">Scroll Down</a>
     <HomeSocials />

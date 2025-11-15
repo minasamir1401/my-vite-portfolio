@@ -61,7 +61,7 @@ function Skills() {
           return (
             <article key={id} className="card_skills" id={`skill-card-${id}`}>
               <div className="icon">
-                <img src={image} alt={title} />
+                <img src={image} alt={title} loading="lazy" />
               </div>
 
               <div className="content">

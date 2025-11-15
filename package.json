@@ -1,7 +1,8 @@
 {
-  "name": "react-portfolio",
-  "private": true,
+  "name": "blue-ecommerce-main",
   "version": "0.0.0",
+  "homepage": "https://minasamir1401.github.io/blue-ecommerce-main",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -32,5 +33,4 @@
   "overrides": {
     "vite": "npm:rolldown-vite@7.1.14"
   }
-  
 }
